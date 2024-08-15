@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Offset calculator</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu_item difference"><h1>Difference</h1></div>
+        <div class="menu_item absolute"><h1>Absolu</h1></div>
+    </div>
+    <div class="page_container">
+        <div class="page page_difference active">
+            <div class="inputs">
+                <div class="inputs_half inputs_1">
+                    <h2>Jantes N°1</h2>
+                    <label for="size_input_1" data-txt="Taille :">Taille</label>
+                    <input id="size_input_1" type="range">
+                    <label for="offset_input_1" data-txt="Offset :">Offset</label>
+                    <input id="offset_input_1" type="range">
+                    <label for="spacer_input_1" data-txt="Calle :">Calle</label>
+                    <input id="spacer_input_1" type="range">
+                </div>
+                <div class="inputs_half inputs_2">
+                    <h2>Jantes N°2</h2>
+                    <label for="size_input_2" data-txt="Taille :">Taille</label>
+                    <input id="size_input_2" type="range">
+                    <label for="offset_input_2" data-txt="Offset :">Offset</label>
+                    <input id="offset_input_2" type="range">
+                    <label for="spacer_input_2" data-txt="Calle :">Calle</label>
+                    <input id="spacer_input_2" type="range">
+                </div>
+            </div>
+        </div>
+        <div class="page page_absolute"></div>
+    </div>
+</body>
+</html>

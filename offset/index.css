@@ -1,0 +1,75 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 5%;
+}
+.menu_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 100%;
+
+    background: #a7cdee;
+}
+.menu_item:hover {
+    background: #8cbce5;
+}
+.menu_item.active {
+    background: #5799d3;
+}
+.menu_item > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+    height: 1.5em;
+}
+
+.page_container, .page {
+    width: 100%;
+    height: calc(100% - 5%);
+}
+.page:not(.active) {
+    display: none;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100%;
+}
+.inputs_half {
+    width: 100%;
+    height: 50%;
+}
+
+.inputs label, .inputs input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    font-size: 3em;
+}
