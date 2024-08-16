@@ -11,6 +11,10 @@ h1 {
 }
 h2 {
     font-size: 40px;
+    margin: 0;
+}
+h3 {
+    font-size: 30px;
 }
 
 .menu {
@@ -46,6 +50,8 @@ h2 {
 }
 
 .page_container, .page {
+    display: flex;
+
     width: 100%;
     height: calc(100% - 5%);
 }
@@ -53,23 +59,38 @@ h2 {
     display: none;
 }
 
-.inputs {
+.inputs, .results {
     display: flex;
     flex-direction: column;
 
     width: 50%;
     height: 100%;
+
+    padding: 20px;
 }
-.inputs_half {
-    width: 100%;
+.half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: calc(100% - 40px);
     height: 50%;
 }
 
-.inputs label, .inputs input {
+.inputs_half label, .inputs_half input, .inputs_half div {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     font-size: 3em;
+}
+.inputs h2, .inputs input[type=range] {
+    width: 100%;
+}
+
+.inputs label {
+    width: 50%;
+}
+.inputs input[type=number] {
+    width: 100px;
 }

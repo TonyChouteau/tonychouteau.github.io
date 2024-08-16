@@ -3,6 +3,7 @@
 <head>
     <title>Offset calculator</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="input_range.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -18,27 +19,49 @@
     <div class="page_container">
         <div class="page page_difference active">
             <div class="inputs">
-                <div class="inputs_half inputs_1">
+                <div class="half inputs_half inputs_1">
                     <h2>Jantes N°1</h2>
-                    <label for="size_input_1" data-txt="Taille :">Taille</label>
-                    <input id="size_input_1" type="range">
-                    <label for="offset_input_1" data-txt="Offset :">Offset</label>
-                    <input id="offset_input_1" type="range">
-                    <label for="spacer_input_1" data-txt="Calle :">Calle</label>
-                    <input id="spacer_input_1" type="range">
+                    <label for="size_input_1" data-txt="Taille :">Taille</label><input type="number" value="8"><div>"</div>
+                    <input id="size_input_1" min="4" max="13" step="0.5" type="range" value="8">
+                    <label for="offset_input_1" data-txt="Offset :">Offset</label><input type="number" value="50"><div>mm</div>
+                    <input id="offset_input_1" min="-50" max="80" step="0.5" type="range" value="50">
+                    <label for="spacer_input_1" data-txt="Calle :">Calle</label><input type="number" value="0"><div>mm</div>
+                    <input id="spacer_input_1" min="0" max="100" step="2.5" type="range" value="0">
                 </div>
-                <div class="inputs_half inputs_2">
+                <div class="half inputs_half inputs_2">
                     <h2>Jantes N°2</h2>
-                    <label for="size_input_2" data-txt="Taille :">Taille</label>
-                    <input id="size_input_2" type="range">
-                    <label for="offset_input_2" data-txt="Offset :">Offset</label>
-                    <input id="offset_input_2" type="range">
-                    <label for="spacer_input_2" data-txt="Calle :">Calle</label>
-                    <input id="spacer_input_2" type="range">
+                    <label for="size_input_2" data-txt="Taille :">Taille</label><input type="number" value="8"><div>"</div>
+                    <input id="size_input_2" min="4" max="13" step="0.5" type="range" value="8">
+                    <label for="offset_input_2" data-txt="Offset :">Offset</label><input type="number" value="50"><div>mm</div>
+                    <input id="offset_input_2" min="-50" max="80" step="0.5" type="range" value="50">
+                    <label for="spacer_input_2" data-txt="Calle :">Calle</label><input type="number" value="0"><div>mm</div>
+                    <input id="spacer_input_2" min="0" max="100" step="2.5" type="range" value="0">
                 </div>
             </div>
+            <div class="results">
+                <div class="half result_1">
+                    <h2 class="result_label">== Données de chaques jantes ==</h2>
+
+                    <h3 class="deport_1_label"></h3>
+                    <h3 class="deport_1"></h3>
+
+                    <h3 class="deport_2_label"></h3>
+                    <h3 class="deport_2"></h3>
+
+                    <h2 class="result_label">== Si vous passez de la jante 1 à la jante 2 ==</h2>
+
+                    <h3 class="ext_label"></h3>
+                    <h3 class="ext"></h3>
+
+                    <h3 class="int_label"></h3>
+                    <h3 class="int"></h3>
+                </div>
+                <div class="half result_2"></div>
+            </div>
         </div>
-        <div class="page page_absolute"></div>
+        <div class="page page_absolute">
+            <h2>En développement</h2>
+        </div>
     </div>
 </body>
 </html>
