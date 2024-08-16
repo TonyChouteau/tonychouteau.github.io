@@ -16,33 +16,33 @@ function showDifference() {
 
         const A1 = -offset_1 + size_1/2;
         const A2 = -offset_2 + size_2/2;
-        const rA1 = Math.round((-offset_1 + size_1/2) * 10) / 10;
-        const rA2 = Math.round((-offset_2 + size_2/2) * 10) / 10;
+        const rA1 = Math.round(A1 * 10) / 10;
+        const rA2 = Math.round(A2 * 10) / 10;
 
         const D1 = A1 + offset_2 - size_2/2;
-        const T1 = size_2 - size_1;
+        const T1 = size_1 - size_2;
         const R1 = T1 - D1;
         const RR1 = T1 - R1;
         const rRR1 = Math.round((RR1 - spacer_2 + spacer_1) * 10) / 10;
 
-        $(".deport_1_label").text(`Déport de la jante 1 par rapport au moyeux (en mm) :`);
+        $(".deport_1_label").text(`Déport de la jante 1 par rapport au moyeux (en mm)`);
         $(".deport_1").text(rA1.toFixed(1));
-        $(".deport_2_label").text(`Déport de la jante 2 par rapport au moyeux (en mm) :`);
-        $(".deport_2").text(A2.toFixed(1));
+        $(".deport_2_label").text(`Déport de la jante 2 par rapport au moyeux (en mm)`);
+        $(".deport_2").text(rA2.toFixed(1));
 
         if (rRR1 < 0) {
-            $(".ext_label").text(`L'extérieur de la jante sera plus sortie de (en cm) :`);
+            $(".ext_label").text(`L'extérieur de la jante sera plus sortie (en cm)`);
             $(".ext").text((-rRR1/10).toFixed(1));
         } else {
-            $(".ext_label").text(`L'extérieur de la jante sera plus rentrée de (en cm) :`);
+            $(".ext_label").text(`L'extérieur de la jante sera plus rentrée (en cm)`);
             $(".ext").text((rRR1/10).toFixed(1));
         }
         const rR1 = Math.round((R1 + spacer_2 - spacer_1) * 10) / 10;
-        if (rRR1 < 0) {
-            $(".int_label").text(`L'interieur de la jante sera plus loin de l'amortisseur de (en cm) :`);
+        if (rR1 >= 0) {
+            $(".int_label").text(`L'interieur de la jante sera plus loin de l'amortisseur (en cm)`);
             $(".int").text((rR1/10).toFixed(1));
         } else {
-            $(".int_label").text(`L'interieur de la jante sera plus proche de l'amortisseur de (en cm) :`);
+            $(".int_label").text(`L'interieur de la jante sera plus proche de l'amortisseur (en cm)`);
             $(".int").text((-rR1/10).toFixed(1));
         }
     }
